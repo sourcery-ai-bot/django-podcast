@@ -12,7 +12,9 @@ setup(
     version='0.5.0',
     description='Django podcast app',
     packages=packages,
-    package_data=dict((package_name, template_patterns) for package_name in packages),
+    package_data={
+        package_name: template_patterns for package_name in packages
+    },
     url='https://github.com/jefftriplett/django-podcast',
     classifiers=[
         'Development Status :: 4 - Beta',
